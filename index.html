@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NOVA SMART FULFILL</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-title">
+                NOVA CART
+            </div>
+
+            <div class="brand-subtitle">
+                SMART FULFILL
+            </div>
+
+        </div>
+
+
+        <nav class="nav">
+
+            <button
+                class="nav-item active"
+                onclick="showPage('dashboard', this)"
+            >
+                <span>▦</span>
+                Dashboard
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('new-order', this)"
+            >
+                <span>＋</span>
+                New Order
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('analysis', this)"
+            >
+                <span>◈</span>
+                Fulfillment Analysis
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('result', this)"
+            >
+                <span>✓</span>
+                Result
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('stores', this)"
+            >
+                <span>⌂</span>
+                Store Network
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="status-dot"></div>
+
+            Smart Fulfill Engine
+
+            <br>
+
+            <small>
+                Operational Prototype
+            </small>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <div class="topbar-title">
+                    NOVA SMART FULFILL
+                </div>
+
+                <div class="topbar-subtitle">
+                    AI-assisted order fulfillment decision system
+                </div>
+
+            </div>
+
+
+            <div class="topbar-status">
+
+                <span class="live-dot"></span>
+
+                LIVE SYSTEM
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             DASHBOARD
+             ================================================= -->
+
+        <section
+            id="dashboard"
+            class="page active-page"
+        >
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        Operations Dashboard
+                    </h1>
+
+                    <p>
+                        Monitor fulfillment reliability across the NOVA CART network.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- KPI -->
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-label">
+                        Orders Today
+                    </div>
+
+                    <div class="stat-value">
+                        1,248
+                    </div>
+
+                    <div class="stat-change">
+                        +8.4% vs yesterday
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-label">
+                        Cancellation Rate
+                    </div>
+
+                    <div class="stat-value">
+                        11%
+                    </div>
+
+                    <div class="stat-change negative">
+                        Needs attention
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-label">
+                        Avg Delivery
+                    </div>
+
+                    <div class="stat-value">
+                        37 min
+                    </div>
+
+                    <div class="stat-change negative">
+                        ↑ 8 min
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-label">
+                        At-Risk Orders
+                    </div>
+
+                    <div class="stat-value">
+                        86
+                    </div>
+
+                    <div class="stat-change negative">
+                        Requires action
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RISK / DRIVERS -->
+
+            <div class="dashboard-grid">
+
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Fulfillment Risk
+                            </h2>
+
+                            <p>
+                                Current order risk distribution
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="risk-row">
+
+                        <div class="risk-info">
+
+                            <span class="risk-indicator low"></span>
+
+                            Low Risk
+
+                        </div>
+
+                        <strong>
+                            72%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="risk-bar">
+
+                        <div
+                            class="risk-fill low-fill"
+                            style="width:72%"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="risk-row">
+
+                        <div class="risk-info">
+
+                            <span class="risk-indicator medium"></span>
+
+                            Medium Risk
+
+                        </div>
+
+                        <strong>
+                            21%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="risk-bar">
+
+                        <div
+                            class="risk-fill medium-fill"
+                            style="width:21%"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="risk-row">
+
+                        <div class="risk-info">
+
+                            <span class="risk-indicator high"></span>
+
+                            High Risk
+
+                        </div>
+
+                        <strong>
+                            7%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="risk-bar">
+
+                        <div
+                            class="risk-fill high-fill"
+                            style="width:7%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Cancellation Drivers
+                            </h2>
+
+                            <p>
+                                Primary operational causes
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="driver-row">
+                        <span>Product unavailable</span>
+                        <strong>35%</strong>
+                    </div>
+
+
+                    <div class="driver-row">
+                        <span>Delivery delay</span>
+                        <strong>27%</strong>
+                    </div>
+
+
+                    <div class="driver-row">
+                        <span>Store rejected order</span>
+                        <strong>18%</strong>
+                    </div>
+
+
+                    <div class="driver-row">
+                        <span>Delivery partner unavailable</span>
+                        <strong>12%</strong>
+                    </div>
+
+
+                    <div class="driver-row">
+                        <span>Other</span>
+                        <strong>8%</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SIMULATOR -->
+
+            <div class="panel simulation-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Store Condition Simulator
+                        </h2>
+
+                        <p>
+                            Test how Smart Fulfill reacts when store conditions change.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="scenario-buttons">
+
+
+                    <button
+                        onclick="applyScenario('normal')"
+                        class="scenario-btn"
+                    >
+                        Normal Conditions
+                    </button>
+
+
+                    <button
+                        onclick="applyScenario('inventoryDisruption')"
+                        class="scenario-btn"
+                    >
+                        Simulate Inventory Disruption
+                    </button>
+
+
+                    <button
+                        onclick="applyScenario('storeBusy')"
+                        class="scenario-btn"
+                    >
+                        Simulate Store Busy Period
+                    </button>
+
+
+                </div>
+
+
+                <div class="simulation-note">
+
+                    <strong>
+                        Decision Logic:
+                    </strong>
+
+                    Inventory Confidence × 50%
+                    +
+                    Delivery Reliability × 30%
+                    +
+                    Operational Capacity × 20%
+
+                    <br><br>
+
+                    <span id="scenario-status">
+                        Current scenario:
+                        <strong>Normal Conditions</strong>
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NEW ORDER
+             ================================================= -->
+
+        <section
+            id="new-order"
+            class="page"
+        >
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        Create New Order
+                    </h1>
+
+                    <p>
+                        Select products and analyze the best fulfillment option.
+                    </p>
+
+                </div>
+
+
+                <div class="order-status-badge">
+
+                    <span class="status-dot-small"></span>
+
+                    Ready for analysis
+
+                </div>
+
+            </div>
+
+
+
+            <div class="order-layout">
+
+
+                <!-- CUSTOMER BASKET -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Customer Basket
+                            </h2>
+
+                            <p>
+                                Choose the products requested by the customer.
+                            </p>
+
+                        </div>
+
+
+                        <div class="product-count">
+
+                            <span id="selected-count">
+                                0
+                            </span>
+
+                            selected
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="product-grid">
+
+
+                        <!-- MILK -->
+
+                        <div
+                            class="product-card"
+                            data-product="Milk 1L"
+                            data-price="64"
+                            onclick="toggleProduct(this)"
+                        >
+
+                            <div class="product-icon">
+                                🥛
+                            </div>
+
+
+                            <div class="product-info">
+
+                                <strong>
+                                    Milk 1L
+                                </strong>
+
+                                <span>
+                                    Fresh dairy
+                                </span>
+
+                                <b>
+                                    ₹64
+                                </b>
+
+                            </div>
+
+
+                            <div class="product-check">
+                                ✓
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- BREAD -->
+
+                        <div
+                            class="product-card"
+                            data-product="Whole Wheat Bread"
+                            data-price="48"
+                            onclick="toggleProduct(this)"
+                        >
+
+                            <div class="product-icon">
+                                🍞
+                            </div>
+
+
+                            <div class="product-info">
+
+                                <strong>
+                                    Whole Wheat Bread
+                                </strong>
+
+                                <span>
+                                    Bakery
+                                </span>
+
+                                <b>
+                                    ₹48
+                                </b>
+
+                            </div>
+
+
+                            <div class="product-check">
+                                ✓
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- EGGS -->
+
+                        <div
+                            class="product-card"
+                            data-product="Eggs 12 Pack"
+                            data-price="86"
+                            onclick="toggleProduct(this)"
+                        >
+
+                            <div class="product-icon">
+                                🥚
+                            </div>
+
+
+                            <div class="product-info">
+
+                                <strong>
+                                    Eggs 12 Pack
+                                </strong>
+
+                                <span>
+                                    12 eggs
+                                </span>
+
+                                <b>
+                                    ₹86
+                                </b>
+
+                            </div>
+
+
+                            <div class="product-check">
+                                ✓
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- BANANAS -->
+
+                        <div
+                            class="product-card"
+                            data-product="Bananas 1kg"
+                            data-price="52"
+                            onclick="toggleProduct(this)"
+                        >
+
+                            <div class="product-icon">
+                                🍌
+                            </div>
+
+
+                            <div class="product-info">
+
+                                <strong>
+                                    Bananas 1kg
+                                </strong>
+
+                                <span>
+                                    Fresh produce
+                                </span>
+
+                                <b>
+                                    ₹52
+                                </b>
+
+                            </div>
+
+
+                            <div class="product-check">
+                                ✓
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="order-action">
+
+                        <button
+                            class="primary-btn"
+                            onclick="analyzeOrder()"
+                        >
+                            Analyze Fulfillment →
+                        </button>
+
+
+                        <span class="action-hint">
+                            Smart Fulfill will compare available stores
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ORDER SUMMARY -->
+
+                <div class="panel order-summary">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Order Summary
+                            </h2>
+
+                            <p>
+                                Customer basket
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="order-summary-content">
+
+                        <div class="empty-order">
+
+                            <div class="empty-order-icon">
+                                🛒
+                            </div>
+
+                            <strong>
+                                Your basket is empty
+                            </strong>
+
+                            <span>
+                                Select products to begin fulfillment analysis.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="order-total"
+                        class="order-total"
+                        style="display:none;"
+                    >
+
+                        <span>
+                            Order Total
+                        </span>
+
+                        <strong>
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ANALYSIS
+             ================================================= -->
+
+        <section
+            id="analysis"
+            class="page"
+        >
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        Fulfillment Analysis
+                    </h1>
+
+                    <p>
+                        Smart Fulfill evaluates candidate stores before the order is routed.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="analysis-status">
+
+
+                <div class="analysis-step active">
+
+                    <span>1</span>
+
+                    Checking Inventory
+
+                </div>
+
+
+                <div class="analysis-line"></div>
+
+
+                <div class="analysis-step active">
+
+                    <span>2</span>
+
+                    Checking Reliability
+
+                </div>
+
+
+                <div class="analysis-line"></div>
+
+
+                <div class="analysis-step active">
+
+                    <span>3</span>
+
+                    Checking Capacity
+
+                </div>
+
+
+                <div class="analysis-line"></div>
+
+
+                <div class="analysis-step">
+
+                    <span>4</span>
+
+                    Recommendation
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="formula-panel">
+
+                <div class="formula-title">
+                    Fulfillment Score
+                </div>
+
+
+                <div class="formula">
+
+                    <span>
+                        Inventory Confidence × 50%
+                    </span>
+
+                    <span>+</span>
+
+                    <span>
+                        Delivery Reliability × 30%
+                    </span>
+
+                    <span>+</span>
+
+                    <span>
+                        Operational Capacity × 20%
+                    </span>
+
+                </div>
+
+
+                <p>
+                    The highest scoring store becomes the recommended fulfillment partner.
+                </p>
+
+            </div>
+
+
+
+            <div id="analysis-results">
+
+                <div class="loading-state">
+
+                    Select products and click
+                    <strong>
+                        Analyze Fulfillment
+                    </strong>
+                    to start.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESULT
+             ================================================= -->
+
+        <section
+            id="result"
+            class="page"
+        >
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        Fulfillment Result
+                    </h1>
+
+                    <p>
+                        Final routing decision generated by Smart Fulfill.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="result-content">
+
+                <div class="empty-state">
+
+                    No fulfillment decision yet.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STORE NETWORK
+             ================================================= -->
+
+        <section
+            id="stores"
+            class="page"
+        >
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        Store Network
+                    </h1>
+
+                    <p>
+                        Current fulfillment capability across partner stores.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="all-stores">
+
+                <!-- JavaScript renders stores here -->
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
